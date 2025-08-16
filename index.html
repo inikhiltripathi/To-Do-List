@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <div class="greeting">
+      <form>
+        <label for="greeting">Enter your name</label>
+        <input type="text" name="greeting" id="greeting" autocomplete="off" />
+        <button type="submit" class="greeting__submit">submit</button>
+        <div class="checkbox-container">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <label for="checkbox">Remember&nbspme!</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="pop_up_task_back"></div>
+    <div class="pop_up_edit_back"></div>
+
+    <div class="main-container container">
+      <div class="sidebar">
+        <div class="sidebar__todos__submit sidebar__items todos__submit">
+          <img
+            src="./assets/images/icons8-plus.svg"
+            alt="plus icon"
+            class="image1"
+          />
+          <img
+            src="./assets/images/icons8-plus2.svg"
+            alt="plus icon"
+            class="image2"
+          />
+          <span class="todos__submit__text">Add task</span>
+        </div>
+
+        <div
+          class="sidebar__all sidebar__items sidebar__items__img"
+          data-status="all"
+        >
+          <img src="./assets/images/icons8-complete.svg" alt="checkIcon" />
+          <span class="sidebar__completed__btn">All Tasks</span>
+        </div>
+
+        <div
+          class="sidebar__leftTodo sidebar__items sidebar__items__img"
+          data-status="uncompleted"
+        >
+          <img src="./assets/images/icons8-cross.svg" alt="checkIcon" />
+          <span class="sidebar__completed__btn">Left to do</span>
+        </div>
+
+        <div
+          class="sidebar__completed sidebar__items sidebar__items__img"
+          data-status="completed"
+        >
+          <img src="./assets/images/icons8-complete.svg" alt="checkIcon" />
+          <span class="sidebar__completed__btn">Completed</span>
+        </div>
+      </div>
+
+      <!--------------------------- Header ---------------------------------->
+      <div class="header">
+        <img
+          src="./assets/images/Vector.svg"
+          alt="menu icon"
+          class="header__menu__icon"
+        />
+        <p class="header__title">My Projects</p>
+        <select name="status" id="status" class="header__options">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="notcompleted">Not Completed</option>
+        </select>
+      </div>
+
+      <!------------------------ Todos section ------------------------------>
+
+      <div class="main">
+        <!-- Pop up add -->
+        <div class="pop-up addtask">
+          <form>
+            <p># Add task</p>
+            <input
+              type="text"
+              placeholder="Task name"
+              class="pop-up__title addtask__title"
+            />
+            <input
+              type="text"
+              placeholder="Description"
+              class="pop-up__description addtask__description"
+            />
+            <div class="pop-up__buttons">
+              <button type="button" class="pop-up__confirm__btn">Add</button>
+              <button type="reset" class="pop-up__cancel__btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Pop up edit -->
+        <div class="pop-up edit-task">
+          <form>
+            <p># Edit task</p>
+            <input
+              type="text"
+              placeholder="Task name"
+              class="pop-up__title pop-up__edit__title"
+            />
+            <input
+              type="text"
+              placeholder="Description"
+              class="pop-up__description pop-up__edit__description"
+            />
+            <div class="pop-up__buttons">
+              <button type="button" class="pop-up__confirm__btn confirm_edit">
+                Confirm
+              </button>
+              <button
+                type="reset"
+                class="pop-up__cancel__btn pop-up__cancel__btn-edit"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <h1 class="todos__title">Tasks</h1>
+        <ul class="todos__container">
+          <!-- todo -->
+          <!-- <li class="todos__self">
+            <div class="todo__self__left">
+              <div class="todo__check">
+                
+                <div class="add_circle"></div> 
+              </div>
+              <div class="todo__text">
+                <p class="todo__title">ETWAS</p>
+                <p class="todo__description">etwas</p>
+              </div>
+            </div>
+
+            <div class="todos__self__right">
+              <img
+                src="./assets/images/8666806_edit_write_pen_icon.svg"
+                alt="edit icon"
+                class="todo__edit"
+              />
+              <img
+                src="./assets/images/4781812_bin_delete_file_garbage_recycle_icon.svg"
+                alt="trashcan icon"
+                class="todo__remove"
+              />
+            </div>
+          </li> -->
+        </ul>
+        <span class="todos__submit">
+          <img
+            src="./assets/images/icons8-plus.svg"
+            alt="plus icon"
+            class="image1"
+          />
+          <img
+            src="./assets/images/icons8-plus2.svg"
+            alt="plus icon"
+            class="image2"
+          />
+          <span class="todos__submit__text">Add task</span>
+        </span>
+        <div class="todos__image-section">
+          <img
+            src="./assets/images/75fbe75fe1d2a7ec59fc1bdb28e56b83.png"
+            alt="image of a suitcase"
+            class="unique_image"
+          />
+          <h3 class="Username_place">Have a marvelous day off, Arian!</h3>
+          <p>Some goals are worth every effort.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
